@@ -19,7 +19,7 @@ int main()
     cin >> baseSalary;
     grossSalary = weeklyWorkingHours * ratePerHour;
     bonusPayment = grossSalary * bonusRate;
-    netSalary = grossSalary * 0.85;
+    netSalary = grossSalary * 0.85 + bonusPayment;
     cout << "\nEmployee: " << employeeName << endl;
     cout << "Gross Salary: $" << grossSalary << endl;
     cout << "Bonus Payment: $" << bonusPayment << endl;
