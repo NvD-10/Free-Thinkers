@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     string employeeName;
-    double weeklyWorkingHours, bonusRate, ratePerHour, baseSalary;
+    double weeklyWorkingHours, bonusRate, baseSalary;
     double grossSalary, bonusPayment, netSalary;
     cout << "Enter employee name: ";
     cin >> employeeName;
@@ -13,14 +13,13 @@ int main()
     cin >> weeklyWorkingHours;
     cout << "Enter bonus rate: ";
     cin >> bonusRate;
-    cout << "Enter rate per hour: ";
-    cin >> ratePerHour;
     cout << "Enter base salary: ";
     cin >> baseSalary;
-    grossSalary = weeklyWorkingHours * ratePerHour;
-    bonusPayment = grossSalary * bonusRate;
-    netSalary = grossSalary * 0.85 + bonusPayment;
-    cout << "\nEmployee: " << employeeName << endl;
+    bonusPayment = baseSalary * bonusRate;
+    grossSalary = baseSalary + bonusPayment;
+    netSalary = baseSalary * 0.8 + bonusPayment;
+    cout << "Employee: " << employeeName << endl;
+    cout << "Weekly working hours: " << weeklyWorkingHours << endl;
     cout << "Gross Salary: $" << grossSalary << endl;
     cout << "Bonus Payment: $" << bonusPayment << endl;
     cout << "Net Salary (after tax): $" << netSalary << endl;
